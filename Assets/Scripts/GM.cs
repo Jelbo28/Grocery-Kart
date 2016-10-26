@@ -10,10 +10,6 @@ public class GM : MonoBehaviour
     private Rigidbody rb;
     private int count;
 
-    public float speed;
-    [SerializeField]
-    private Text countText;
-    public Text winText;
 
     // Use this for initialization
     void Awake ()
@@ -26,7 +22,8 @@ public class GM : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 
@@ -44,13 +41,5 @@ public class GM : MonoBehaviour
     void Start()
     {
         count = 0;
-        winText.text = "";
-    }
-
-
-
-    void Win()
-    {
-        winText.text = "You Win!";
     }
 }

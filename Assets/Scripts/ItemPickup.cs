@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class ItemPickup : MonoBehaviour {
-    public int pointValue;
 
-    void OnTriggerEnter(Collision other)
+    [SerializeField]
+    private int pointValue;
+
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        Debug.Log("poop");
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("addScore");
             GM.addScore(pointValue);
